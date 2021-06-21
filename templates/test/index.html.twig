@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Longeur de mon nom
+{% endblock %}
+
+{% block body %}
+    <style>
+        h1 {
+            background-color: #33cc66;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Votre nom est
+            {{nom}}, il est composé de
+            {{taille}}
+            caractères.</h1>
+
+        
+
+        {% if taille >= min %}
+
+            <p>{{nom}} est supérieur ou égal que {{min}}</p>
+
+        {% else %}
+            <p>{{nom}} est inférieur de {{min}}</p>
+
+        {% endif %}
+
+        <p>
+            Merci pour votre visite</p>
+    </div>
+{% endblock %}
